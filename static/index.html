@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Serafim </title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="icon" href="/static/favicon.png?v=1" type="image/png">
+</head>
+  <body>
+
+<div class="header">
+  <img src="/static/logo.png" alt="Serafim Logo" class="logo" style="display:block;margin:2rem auto;width:200px;">
+   
+</div>
+
+<h1>Welcome, mortal</h1>
+
+<div class="card">
+  <h2>System status</h2>
+    <p>Uptime: <span id="uptime">Loading...</span></p>
+    <p>Version: <span id="version">Loading...</span></p>
+    <p>Server time: <span id="serverTime">Loading...</span></p>
+    
+</div>
+
+<div class="card">
+  <div><strong>CPU:</strong> <span id="cpu">Loading...</span></div>
+<div><strong>RAM:</strong> <span id="ram">Loading...</span></div>
+<div><strong>Disk:</strong> <span id="disk">Loading...</span></div>
+</div>
+
+<div id="system-extra" style="display: none; margin-top: 10px;">
+<div class="card">
+<div><strong>OS:</strong> <span id="os">Loading...</span></div>
+<div><strong>Kernel:</strong> <span id="kernel">Loading...</span></div>
+<div><strong>Load:</strong> <span id="load">Loading...</span></div>
+</div>
+</div>
+<button id="toggle-extra" class="serafim-btn">More info</button>
+
+<!-- <div class="card">
+  <h2>Logs</h2>
+  <pre id="logbox" class="logbox"></pre>
+</div>
+--->
+
+
+
+<script src="/static/script.js"></script>
+</body>
+</html>
