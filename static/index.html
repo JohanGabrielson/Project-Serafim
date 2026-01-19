@@ -5,7 +5,9 @@
   <link rel="stylesheet" href="/static/style.css">
   <link rel="icon" href="/static/favicon.png?v=1" type="image/png">
 </head>
-  <body>
+<body>
+
+
 
 <div class="header">
   <img src="/static/logo.png" alt="Serafim Logo" class="logo" style="display:block;margin:2rem auto;width:200px;">
@@ -36,6 +38,12 @@
 </div>
 </div>
 <button id="toggle-extra" class="serafim-btn">More info</button>
+
+<section id="logs-section">
+    <h2>Logs</h2>
+    <button onclick="fetchLogs()" class="serafim-btn">Reload Logs</button>
+    <pre id="logs-container" class="log-box"></pre>
+</section>
 
 <!-- <div class="card">
   <h2>Logs</h2>

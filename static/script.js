@@ -59,3 +59,38 @@ document.getElementById("toggle-extra").addEventListener("click", () => {
         btn.textContent = "Show more";
     }
 });
+
+async function fetchLogs() {
+    const container = document.getElementById("logs-container");
+
+    // Är användaren längst ner?
+    const isAtBottom =
+        Math.abs(container.scrollHeight - container.scrollTop - container.clientHeight) < 5;
+
+    try {
+        const response = await fetch("/api/logs/");
+        const data = await response.json();
+
+        if (!data.logs || data.logs.length === 0) {
+            container.textContent = "No logs available.";
+            return;
+        }
+
+        // Bygg hela texten i en sträng (snabbt och stabilt)
+        const fullText = data.logs.join("\n");
+
+        // Uppdatera utan att nollställa scrollpositionen
+        container.textContent = fullText;
+
+        // Auto-scroll endast om användaren var längst ner
+        if (isAtBottom) {
+            container.scrollTop = container.scrollHeight;
+        }
+
+    } catch (err) {
+        console.error("Error fetching logs:", err);
+        container.textContent = "Failed to load logs.";
+    }
+}
+fetchLogs();
+setInterval(fetchLogs, 10000);

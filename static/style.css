@@ -55,3 +55,42 @@ a {
   font-size: 1rem;
   transition: background-color 0.3s ease;
 }
+
+:root {
+    --bg: #0a0a0a;
+    --fg: #e0e0e0;
+    --accent: #00eaff;
+}
+
+.log-box {
+    background: #111;
+    color: #0f0;
+    padding: 10px;
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #333;
+    font-family: monospace;
+}
+
+.log-info {
+    color: #4caf50; /* grön */
+}
+
+.log-warning {
+    color: #ff9800; /* orange */
+}
+
+.log-error {
+    color: #f44336; /* röd */
+}
+
+#logs-container {
+    color: #4caf50; /* grön */
+    background: #111;
+    padding: 10px;
+    border-radius: 6px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    overflow-y: auto;
+    max-height: 400px;
+}
