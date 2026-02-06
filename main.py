@@ -15,14 +15,18 @@ from app.logger import logger
 
 app = FastAPI(title="Serafim API")
 
+
+
+from fastapi.responses import FileResponse
+
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 @app.get("/")
 def root():
-    logger.info("GET / called")
-    return {"message": "Serafim API is running"}
-
+  #  logger.info("GET / called")
+  #return {"message": "Serafim API is running"}
+    return FileResponse("static/index.html")
 
 # register routers
 app.include_router(system_router, prefix="/api")

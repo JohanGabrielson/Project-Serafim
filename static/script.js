@@ -94,3 +94,13 @@ async function fetchLogs() {
 }
 fetchLogs();
 setInterval(fetchLogs, 10000);
+
+document.getElementById("restartBtn").addEventListener("click", async () => {
+    await fetch("/api/system/restart", { method: "POST" });
+    alert("Server restarting...");
+});
+
+document.getElementById("shutdownBtn").addEventListener("click", async () => {
+    await fetch("/api/system/shutdown", { method: "POST" });
+    alert("Server shutting down...");
+});

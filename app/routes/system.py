@@ -1,8 +1,22 @@
-from fastapi import APIRouter
+
 from app.services.system import get_system_status
-from app.logger import logger   # ← korrekt import
+from app.logger import logger  
+from app.services.system import restart_service, shutdown_service
+from fastapi import APIRouter, HTTPException
+import subprocess
 
 router = APIRouter(prefix="/system", tags=["system"])
+
+@router.post("/restart")
+def restart():    
+    subprocess.Popen(["sudo", "reboot"])
+    return {"status": "restarting"}
+   
+@router.post("/shutdown")
+def shutdown():  
+    subprocess.Popen(["sudo", "shutdown", "-h", "now"])
+    return {"status": "shutting_down"}
+    
 
 
 @router.get("/")
