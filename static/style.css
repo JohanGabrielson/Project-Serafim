@@ -82,19 +82,19 @@ a {
 }
 
 .log-info {
-    color: #4caf50; /* grön */
+    color: #4caf50; 
 }
 
 .log-warning {
-    color: #ff9800; /* orange */
+    color: #ff9800; 
 }
 
 .log-error {
-    color: #f44336; /* röd */
+    color: #f44336; 
 }
 
 #logs-container {
-    color: #4caf50; /* grön */
+    color: #4caf50; 
     background: #111;
     padding: 10px;
     border-radius: 6px;

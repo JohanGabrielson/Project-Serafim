@@ -63,7 +63,7 @@ document.getElementById("toggle-extra").addEventListener("click", () => {
 async function fetchLogs() {
     const container = document.getElementById("logs-container");
 
-    // Är användaren längst ner?
+    // Is user currently scrolled to the bottom? 
     const isAtBottom =
         Math.abs(container.scrollHeight - container.scrollTop - container.clientHeight) < 5;
 
@@ -76,13 +76,13 @@ async function fetchLogs() {
             return;
         }
 
-        // Bygg hela texten i en sträng (snabbt och stabilt)
+        // Build the full log text
         const fullText = data.logs.join("\n");
 
-        // Uppdatera utan att nollställa scrollpositionen
+        // Update the log container with the new logs
         container.textContent = fullText;
 
-        // Auto-scroll endast om användaren var längst ner
+        // Auto scroll to bottom if user was already at the bottom before the update
         if (isAtBottom) {
             container.scrollTop = container.scrollHeight;
         }
