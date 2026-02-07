@@ -30,17 +30,20 @@ serafim/
 ## Installation
 1. Clone repo:
 
-´´ 
+```
 git clone https://github.com/<user>/serafim.git
 cd serafim
-´´
+```
 
 2. Install backend dependencies
 
-´´
-pip install -r requirements.txt ´´
+```
+pip install -r requirements.txt ´
+```
 
-3. ´´ uvicorn backend.main:app --reload ´´
+3. ``` uvicorn backend.main:app --reload 
+```
 
 4.  Open frontend/index.html in browser
-5.  
+
+(to be continued) 
