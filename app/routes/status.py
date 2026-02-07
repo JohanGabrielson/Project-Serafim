@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from app.services.system import get_system_status
-from app.logger import logger   # ← detta är filen du undrar över
+from app.logger import logger   
 
 import platform
 import os
