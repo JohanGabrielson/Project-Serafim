@@ -41,8 +41,8 @@
 
 <section id="logs-section">
     <h2>Logs</h2>
-    <button onclick="fetchLogs()" class="serafim-btn">Reload Logs</button>
     <pre id="logs-container" class="log-box"></pre>
+    <button onclick="fetchLogs()" class="serafim-btn">Reload Logs</button>
 </section>
 
 <!-- <div class="card">
@@ -50,8 +50,13 @@
   <pre id="logbox" class="logbox"></pre>
 </div>
 --->
-
-
+<div class="serafim-control-panel">
+    <h2>System Controls</h2>
+<div class="serafim-actions">
+    <button id="restartBtn" class="serafim-btn">Restart</button>
+    <button id="shutdownBtn" class="serafim-btn">Shutdown</button>
+</div>
+</div>
 
 <script src="/static/script.js"></script>
 </body>

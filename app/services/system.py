@@ -5,6 +5,16 @@ import datetime
 import subprocess
 import os
 
+SERVICE_NAME = "serafim.service"
+
+def restart_service():
+    subprocess.run(["sudo", "systemctl", "restart", SERVICE_NAME], check=True)
+
+def shutdown_service():
+    subprocess.run(["sudo", "systemctl", "stop", SERVICE_NAME], check=True)
+
+
+
 def get_system_status():
     #Uptime  
     boot_time = psutil.boot_time()

@@ -94,3 +94,15 @@ async function fetchLogs() {
 }
 fetchLogs();
 setInterval(fetchLogs, 10000);
+
+document.getElementById("restartBtn").addEventListener("click", () => {
+    if (confirm("⚠️ WARNING! System Restart 🔄\n\nThis will restart the Serafim system. ")) {
+        fetch("/api/restart", { method: "POST" });
+    }
+});
+
+document.getElementById("shutdownBtn").addEventListener("click", () => {
+    if (confirm("⚠️ WARNING! System Shutdown 🛑\n\nThis will shutdown the Serafim system.")) {
+        fetch("/api/shutdown", { method: "POST" });
+    }
+});

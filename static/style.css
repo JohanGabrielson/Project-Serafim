@@ -44,6 +44,15 @@ a {
   padding: 20px 0;
 }
 
+.serafim-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 25px;
+  padding: 15px;
+  background: #1a1a1a;
+  border-radius: 8px;
+}
 
 .serafim-btn {
   background-color: #00bcd4;
@@ -93,4 +102,35 @@ a {
     white-space: pre-wrap;
     overflow-y: auto;
     max-height: 400px;
+}
+
+
+.system-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    
+    
+}
+
+.serafim-control-panel {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
+}
+
+.serafim-control-panel h2 {
+  margin-bottom: 15px;
+  color: #00bcd4;
+  font-size: 1.3rem;
+}
+
+.serafim-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
