@@ -38,10 +38,13 @@ cd serafim
 2. Install backend dependencies
 
 ```
-pip install -r requirements.txt ´
+pip install -r requirements.txt 
 ```
 
-3. ``` uvicorn backend.main:app --reload 
+3. 
+
+``` 
+uvicorn backend.main:app --reload 
 ```
 
 4.  Open frontend/index.html in browser
