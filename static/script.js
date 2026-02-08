@@ -106,3 +106,4 @@ document.getElementById("shutdownBtn").addEventListener("click", () => {
         fetch("/api/shutdown", { method: "POST" });
     }
 });
+

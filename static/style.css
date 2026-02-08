@@ -135,3 +135,20 @@ a {
   gap: 20px;
 }
 
+.popup {
+  background: rgba(10, 10, 15, 0.85);
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  box-shadow:
+    0 0 20px rgba(0, 255, 255, 0.4),
+    0 0 40px rgba(0, 255, 255, 0.2);
+  color: #afffff;
+  padding: 2rem;
+  border-radius: 10px;
+  font-family: "Share Tech Mono", monospace;
+  animation: neonIn .25s ease;
+}
+
+@keyframes neonIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
