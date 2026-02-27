@@ -16,7 +16,9 @@
 
 <h1>Welcome, mortal</h1>
 
+
 <div class="card">
+  
   <h2>System status</h2>
     <p>Uptime: <span id="uptime">Loading...</span></p>
     <p>Version: <span id="version">Loading...</span></p>
@@ -39,11 +41,13 @@
 </div>
 <button id="toggle-extra" class="serafim-btn">More info</button>
 
+<div class="serafim-control-panel">
 <section id="logs-section">
     <h2>Logs</h2>
     <pre id="logs-container" class="log-box"></pre>
     <button onclick="fetchLogs()" class="serafim-btn">Reload Logs</button>
 </section>
+</div>
 
 <!-- <div class="card">
   <h2>Logs</h2>
