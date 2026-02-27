@@ -18,8 +18,11 @@
 
 
 <div class="card">
-  
-  <h2>System status</h2>
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <h2 style="margin:0;">System Status</h2>
+      <button id="toggle-extra" class="serafim-btn">More info</button>
+  </div>
+
     <p>Uptime: <span id="uptime">Loading...</span></p>
     <p>Version: <span id="version">Loading...</span></p>
     <p>Server time: <span id="serverTime">Loading...</span></p>
@@ -39,7 +42,7 @@
 <div><strong>Load:</strong> <span id="load">Loading...</span></div>
 </div>
 </div>
-<button id="toggle-extra" class="serafim-btn">More info</button>
+
 
 <div class="serafim-control-panel">
 <section id="logs-section">
